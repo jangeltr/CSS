@@ -6,7 +6,7 @@
     <title>Document</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="container min-w-xl max-w-7xl mx-auto">
     <header>
         <nav class="bg-gray-800">
             <div class="container mx-auto flex items-center justify-between p-4">
@@ -21,5 +21,37 @@
             </div>
         </nav>
     </header>
+    <article class="w-full flex justify-around bg-gray-200">
+        <div class="w-50 h-50 bg-gray-500 content-start">
+            <h1 class="text-4xl text-center">Titulo 1</h1>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
+        <div class="w-50 h-50 bg-gray-500 content-center">
+            <h1 class="text-4xl text-center">Titulo 2</h1>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
+        <div class="w-50 h-50 bg-gray-500 content-end">
+            <h1 class="text-4xl text-center">Titulo 3</h1>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
+    </article>
+    <article class="w-full grid grid-cols-4 place-items-center bg-gray-300 pt-5 pb-5">
+        <div class="w-50 h-50 col-span-2 bg-gray-500 place-content-start rounded-lg shadow-2xl shadow-red-300 m-5">
+            <h1 class="text-4xl text-center">Titulo 1</h1>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
+        <div class="w-50 h-50 col-span-2 bg-gray-500 place-content-center">
+            <h1 class="text-4xl text-center">Titulo 2</h1>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
+        <div class="w-50 h-50 bg-gray-500 place-content-end">
+            <h1 class="text-4xl text-center">Titulo 3</h1>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
+        <div class="w-50 h-50 bg-gray-500 place-content-start">
+            <h1 class="text-4xl text-center">Titulo 1</h1>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
+    </article>
 </body>
 </html>
