@@ -1,0 +1,46 @@
+#Con node
+
+npm init -y
+npm install -D tailwindcss@latest
+
+npx tailwindcss init        #Se crea el archivo tailwind.config.js
+tailwind.config.js
+    /** @type {import('tailwindcss').Config} */
+    module.exports = {
+    content: ['./index.html'],
+    theme: {
+        extend: {}
+    },
+    plugins: []
+    };
+
+#Crear archivo tailwind.css
+tailwind.css
+    @import 'tailwindcss/base';
+    @import 'tailwindcss/components';
+    @import 'tailwindcss/utilities';
+
+#En el head de index.html agregar
+<link href="styles.css" rel="stylesheet" />
+
+#En package.json
+    {
+        "name": "curso-tailwindcss",
+        "version": "1.0.0",
+        "main": "index.js",
+        "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1",
+            "build-tailwind": "npx tailwindcss -i tailwind.css -o styles.css"       #a partir de las clases utilizadas en los html genera styles.css
+        },
+        "keywords": [],
+        "author": "",
+        "license": "ISC",
+        "description": "",
+        "devDependencies": {
+            "tailwindcss": "^3.4.17"
+        }
+    }
+npm run build-tailwind      #Sera necesario ejecutar este comando cada que apliquemos cambios agregando clases tailwind a nuestro html
+
+npx tailwind -i tailwind.css -o styles.css --watch      #ejecutando este comando no sera necesario a cada cambio ejecutar el comando anterior
+
